@@ -5,7 +5,11 @@ public class Car {
     private String color = "";
     private ArrayList<String> extraOptions = new ArrayList<String>();
 
-    public static class BuilderCar extends IBuilderCar {
+    public String toString() {
+        return model + " " + color + " " + extraOptions;
+    }
+
+    public static class BuilderCar {
         private String model = "";
         private String color = "";
         private ArrayList<String> extraOptions = new ArrayList<String>();
@@ -14,7 +18,6 @@ public class Car {
             this.model = model;
         }
 
-        @Override
         public BuilderCar addOptions(String item){
             this.extraOptions.add(item);
             return this;
@@ -25,14 +28,11 @@ public class Car {
             return this;
         }
 
-        @Override
         public Car build(){
             return new Car();
         }
     }
 
-    public String toString() {
-        return model + " " + color + " " + extraOptions;
-    }
+
 
 }
