@@ -12,7 +12,15 @@ public class Car {
     }
 
     public String toString() {
-        return "Le model est: " + model + " la couleur est: " + color + " extra options: " + extraOptions;
+        return  "----------------------------" + "\n" + "Le model est: " + model + "\n" +"La couleur est: " + color + "\n" + "Extra options: " + extraOptions + "\n" + "----------------------------";
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public static class BuilderCar {
@@ -42,10 +50,6 @@ public class Car {
             return model;
         }
         public String getColor() {
-            return color;
-        }
-        public String setColor(String color) {
-            this.color = color;
             return color;
         }
     }
